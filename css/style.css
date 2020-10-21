@@ -3012,4 +3012,37 @@ footer.footer-box .heading_main h2 {
 
 
 
+.bg-service{
+	background:url('../images/servicios.jpg');
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 70vh;
+	width: 100%;
+}
 
+.btn-float{
+	bottom: 40px;
+	right: 40px;
+	height: 60px;
+	width: 60px;
+	z-index:999;
+	position: fixed;
+	padding-top: 10px;
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.btn-float  {
+		bottom: 30px;
+		left: 20px; } 
+		
+	}
+
+@media only screen and (max-width: 767px) {
+	.btn-float  {
+		bottom: 30px;
+		left: 20px; } 
+}
