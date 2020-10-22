@@ -4,40 +4,33 @@ $errorMSG = "";
 
 // NAME
 if (empty($_POST["name"])) {
-    $errorMSG = "Name is required ";
+    $errorMSG = "Nombre es requerido ";
 } else {
     $name = $_POST["name"];
 }
 
 // EMAIL
 if (empty($_POST["email"])) {
-    $errorMSG .= "Email is required ";
+    $errorMSG .= "Email es requerido ";
 } else {
     $email = $_POST["email"];
 }
 
-// MSG Guest
-if (empty($_POST["guest"])) {
-    $errorMSG .= "Subject is required ";
+// MSG 
+if (empty($_POST["msg"])) {
+    $errorMSG .= "Mensaje es requerido ";
 } else {
-    $guest = $_POST["guest"];
+    $msg = $_POST["msg"];
 }
 
 
-// MSG Event
-if (empty($_POST["event"])) {
-    $errorMSG .= "Subject is required ";
+// PHONE
+if (empty($_POST["phone"])) {
+    $errorMSG .= "Telefono es requerido ";
 } else {
-    $event = $_POST["event"];
+    $phone = $_POST["phone"];
 }
 
-
-// MESSAGE
-if (empty($_POST["message"])) {
-    $errorMSG .= "Message is required ";
-} else {
-    $message = $_POST["message"];
-}
 
 
 $EmailTo = "nicolaschamorro@cisde.co";
@@ -45,32 +38,30 @@ $Subject = "Nuevo mensaje recibido";
 
 // prepare email body text
 $Body = "";
-$Body .= "Name: ";
+$Body .= "Nombre: ";
 $Body .= $name;
 $Body .= "\n";
 $Body .= "Email: ";
 $Body .= $email;
 $Body .= "\n";
-$Body .= "guest: ";
-$Body .= $guest;
+$Body .= "Mensaje: ";
+$Body .= $msg;
 $Body .= "\n";
-$Body .= "event: ";
-$Body .= $event;
+$Body .= "phone: ";
+$Body .= $phone;
 $Body .= "\n";
-$Body .= "Message: ";
-$Body .= $message;
-$Body .= "\n";
+
 
 // send email
 $success = mail($EmailTo, $Subject, $Body, "From:".$email);
 
 // redirect to success page
 if ($success && $errorMSG == ""){
-   echo "success";
-   
+    echo "Enviado";
+
 }else{
     if($errorMSG == ""){
-        echo "Something went wrong :(";
+        echo "Ocurrio un error:(";
     } else {
         echo $errorMSG;
     }

@@ -3038,6 +3038,10 @@ footer.footer-box .heading_main h2 {
 	.btn-float  {
 		bottom: 30px;
 		left: 20px; } 
+
+		.logo_main {
+			padding: 0px 0 0;
+		}
 		
 	}
 
@@ -3045,4 +3049,9 @@ footer.footer-box .heading_main h2 {
 	.btn-float  {
 		bottom: 30px;
 		left: 20px; } 
+
+		.logo_main {
+			padding: 0px 0 0;
+			height: 10px;
+		}
 }
