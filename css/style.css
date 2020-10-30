@@ -847,7 +847,7 @@ button#sidebarCollapse {
     font-weight: 900;
 }
 
-.slide_text h4 {
+.slide_text h4, h1, h2 {
     font-size: 75px;
     font-weight: 500;
     margin: 0;
