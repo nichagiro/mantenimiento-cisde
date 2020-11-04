@@ -55,16 +55,7 @@ $Body .= "\n";
 // send email
 $success = mail($EmailTo, $Subject, $Body, "From:".$email);
 
-// redirect to success page
-if ($success && $errorMSG == ""){
-    echo "Enviado";
+header('Location:../index.html');
 
-}else{
-    if($errorMSG == ""){
-        echo "Ocurrio un error:(";
-    } else {
-        echo $errorMSG;
-    }
-}
 
 ?>
